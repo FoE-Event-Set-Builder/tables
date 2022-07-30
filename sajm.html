@@ -24376,3 +24376,25 @@
 </tr>
 </tbody>
   </table>
+
+<script>
+    $(document).ready( function () {
+    $('#table_id').dataTable( {
+        lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"]],
+        pageLength: -1,
+      	scrollX: true,
+      	scrollY: true,
+      	scrollCollapse: true,
+      	colReorder: true,
+      	fixedColumns: {left: 1},
+      	columnDefs: [
+          { type: 'natural', targets: "_all" },
+          { orderSequence: ["desc", "asc"], targets: "_all"}
+        ],
+      	fixedHeader: {
+          headerOffset: $('#header').outerHeight()
+      }
+      
+     } );
+} );
+  </script>
